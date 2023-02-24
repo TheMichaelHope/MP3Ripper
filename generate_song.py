@@ -1,4 +1,4 @@
-import ytd_lp as youtube_dl
+import yt_dlp as youtube_dl
 import sys
 import os
 
