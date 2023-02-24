@@ -1,4 +1,4 @@
-import youtube_dl
+import ytd_lp as youtube_dl
 import sys
 import os
 
@@ -29,7 +29,6 @@ def execute():
     else:
         ydl_opts = {
             'format': 'bestaudio/best',
-            'cachedir': False,
             'outtmpl': dir_path + f'/{sys.argv[1]}.mp3',
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
@@ -39,6 +38,7 @@ def execute():
         }
 
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            ydl.cache.remove()
             video = sys.argv[2:]
             ydl.download(video)
 
