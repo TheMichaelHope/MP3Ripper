@@ -4,7 +4,9 @@
 
 Install Requirements
 
-`pip3 install --upgrade -r requirements.txt`
+`python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz`
+
+`python3 -m pip install --upgrade -r requirements.txt`
 
 ### Step 2
 
