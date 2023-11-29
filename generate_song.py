@@ -23,7 +23,7 @@ def execute():
 
         for root, dirs, files in os.walk(dir_path):
             for file in files:
-                if file.endswith('.mp3'):
+                if file.endswith(f'{sys.argv[2]}.mp3'):
                     os.system('ffmpeg -i ' + file + ' -filter:a "atempo=1.5" -vn new_' + file)
                     os.remove(file)
     else:
