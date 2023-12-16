@@ -29,7 +29,7 @@ def execute():
     else:
         ydl_opts = {
             'format': 'bestaudio/best',
-            'outtmpl': dir_path + f'/{sys.argv[1]}.mp3',
+            'outtmpl': dir_path + f'/{sys.argv[1]}',
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
